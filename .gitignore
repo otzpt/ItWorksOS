@@ -1,0 +1,26 @@
+# Build output
+*.bin
+*.o
+*.elf
+*.img
+*.iso
+*.map
+*.lst
+build/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# QEMU
+*.log
+
+# Editors and OS
+.vscode/
+.idea/
+*.swp
+.DS_Store
+
+# Claude Code local state
+.claude/
