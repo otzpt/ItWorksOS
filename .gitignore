@@ -8,6 +8,24 @@
 *.lst
 build/
 
+# Kernel build output and downloaded deps (make clean / make distclean remove these)
+kernel/bin/
+kernel/obj/
+kernel/.deps-obtained
+kernel/.cache/
+kernel/compile_commands.json
+kernel/cc-runtime/
+kernel/freestanding-c-hdrs/
+kernel/limine-protocol/
+
+# Image build and downloaded Limine / OVMF (also removed by make distclean)
+iso_root/
+limine-binary/
+limine-binary.tar.gz
+edk2-ovmf-bins/
+edk2-ovmf-bins.tar.gz
+*.hdd
+
 # Python
 __pycache__/
 *.pyc

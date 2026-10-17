@@ -8,10 +8,9 @@ This file is written and kept up to date by Claude as it works. Claude adds a ro
 
 | File | Date | Notes |
 |------|------|-------|
-| asm_learning/LESSONS.md | 2026-10-16 | Assembly lesson notes. Written from memory, not run or checked against a reference. |
-| asm_learning/EXERCISES.md | 2026-10-16 | Exercise descriptions only. No solutions. Not run. |
 | AI_DECLARATION.md | 2026-10-16 | This file. |
-| .gitignore | 2026-10-16 | Ignores build output, Python caches, editor files and .claude/. |
+| .asm-lsp.toml | 2026-10-17 | asm-lsp config: NASM docs, diagnostics off. Not yet confirmed in the editor. |
+| .gitignore | 2026-10-16, updated 2026-10-17 | Ignores build output, Python caches, editor files and .claude/. 2026-10-17: added kernel build output, downloaded deps, Limine and OVMF downloads, iso_root and *.hdd, taken from the clean and distclean targets in the makefiles. |
 
 ## Rules
 

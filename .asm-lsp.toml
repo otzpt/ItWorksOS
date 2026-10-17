@@ -1,0 +1,12 @@
+# Claude (Sonnet 5.5) wrote this file at the owner's request. See AI_DECLARATION.md.
+#
+# This project is written in NASM (Intel syntax). By default asm-lsp builds
+# diagnostics by running gcc as the GNU assembler (AT&T syntax), which
+# rejects every NASM file. Diagnostics are off until a NASM setup is verified.
+[default_config]
+assembler = "nasm"
+instruction_set = "x86/x86-64"
+
+[opts]
+diagnostics = false
+default_diagnostics = false
