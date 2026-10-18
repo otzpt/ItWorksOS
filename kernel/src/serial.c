@@ -1,20 +1,8 @@
 #include <stdint.h>
 #include "serial.h"
+#include "io.h"
 
 #define COM1 0x3F8              //first serial port, an I/O port number
-
-// out/in talk to I/O ports, a separate address space from memory
-static inline void outb(uint16_t port, uint8_t val) {
-    // "a" = value in al, "Nd" = port as constant or in dx
-    asm volatile ("outb %0, %1" : : "a"(val), "Nd"(port));
-}
-
-static inline uint8_t inb(uint16_t port) {
-    uint8_t ret;
-    //"=a" = output comes back in al
-    asm volatile ("inb %1, %0" : "=a"(ret) : "Nd"(port));
-    return ret;
-}
 
 void serial_init(void) {
     outb(COM1 + 1, 0x00);       //interrupts off, we poll

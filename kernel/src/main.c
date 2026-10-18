@@ -4,6 +4,8 @@
 #include <limine.h>
 #include "serial.h"
 #include "console.h"
+#include "keyboard.h"
+#include "shell.h"
 
 // Set the base revision to 6, this is recommended as this is the latest
 // base revision described by the Limine boot protocol specification.
@@ -96,9 +98,9 @@ void kmain(void) {
 
         //fb_pattern(framebuffer);
         console_init(framebuffer);
-        console_puts("ItWorksOS booted\n> ");
+        console_puts("ItWorksOS booted\n");
     }
 
     // We're done, just hang...
-    hcf();
+    shell_run();
 }
